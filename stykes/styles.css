@@ -1,0 +1,124 @@
+/* css/styles.css */
+:root {
+    --primary-blue: #001f3f;
+    --secondary-blue: #003d5c;
+    --light-blue: #0051a5;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Theater Seats */
+.theater-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0051a5;
+    background-color: #1a3a52;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.seat:hover:not(.occupied):not(.selected) {
+    background-color: #003d5c;
+    transform: scale(1.1);
+}
+
+.seat.selected {
+    background-color: #0051a5;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 81, 165, 0.5);
+}
+
+.seat.occupied {
+    background-color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.stage {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0051a5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Event Cards */
+.event-card {
+    background: linear-gradient(135deg, #001f3f 0%, #003d5c 100%);
+    border: 2px solid #0051a5;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 81, 165, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .seat {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .text-6xl {
+        font-size: 2.5rem !important;
+    }
+}
