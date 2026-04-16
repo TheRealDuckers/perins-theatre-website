@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perins School Theatre</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">🎭 Perins Theatre</h1>
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+                <li><a href="events.html" class="hover:text-blue-300">Events</a></li>
+                <li><a href="tickets.html" class="hover:text-blue-300">Book Tickets</a></li>
+                <li><a href="admin.html" class="hover:text-blue-300">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header with Video Background -->
+    <header class="relative h-screen overflow-hidden">
+        <video autoplay muted loop class="absolute w-full h-full object-cover">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="text-6xl font-bold mb-4 animate-fade-in">Welcome to Perins Theatre</h1>
+            <p class="text-2xl mb-8">Experience the Magic of Live Performance</p>
+            <a href="events.html" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-100 transition">
+                Explore Events
+            </a>
+        </div>
+    </header>
+
+    <!-- Featured Section -->
+    <section class="bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Performances</h2>
+            <div id="featured-events" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Featured events will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">About Perins Theatre</h2>
+            <p class="text-center text-gray-300 max-w-2xl mx-auto">
+                Perins School Theatre is dedicated to providing the finest theatrical experiences to our community. 
+                We showcase talented student performers and bring stories to life on stage.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2026 Perins School Theatre. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
